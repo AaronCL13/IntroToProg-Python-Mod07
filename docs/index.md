@@ -25,31 +25,37 @@ To get started, I imported the Pickle module and declared my variables (Figure 1
 
 From there, I created my first class for processing the data, which contains 5 functions. The first of those is for adding data to the list (Figure 2). This function also allows me to do a little math and format it into a dollar figure.
 
------ pic ---------
+![Figure 2](Figure%202.png "Figure 2")
+
 *Figure 2:  The add_data_to_list function*
 
 Next, I created a function for getting the total project cost. This simply creates a cost float variable and adds the total cost from each row, from the list you provide, to it. It returns the total back to the program (Figure 3).
 
------ pic ---------
+![Figure 3](Figure%203.png "Figure 3")
+
 *Figure 3:  The get_project_cost function*
 
 In order to present the pickled data back to the user in a more presentable way, I created a function to do just that (Figure 4). It iterates through each row, even formatting the Total Cost of each into a dollar figure.
  
------ pic ---------
+![Figure 4](Figure%204.png "Figure 4")
+
 *Figure 4:  The present_list_data function*
+
 The two functions to follow were created to pickle and unpickle the data (Figure 5). As you can see, pickling is pretty simple.
 To write the data, you “dump” it into the file. To read the data in the file, you “load” it. In both cases I’ve decided to open the file using the “with” statement. Because this statement also automatically closes the file, I don’t need to include the “close” function.
 The pickle function takes two parameters: the file to create or write to and the list of data to write to it.
 The unpickle function takes one parameter: the file to read; and returns the data from the file.
  
------ pic ---------
+![Figure 5](Figure%205.png "Figure 5")
+
 *Figure 5:  The pickle and unpickle functions*
 
 ### The IO Class and Functions
 
 I also created two input/output functions, within the IO Class. One of these gets user input and returns it to the program, while the other prints back total project cost (Figure 6).
 
------ pic ---------
+![Figure 6](Figure%206.png "Figure 6")
+
 *Figure 6:  The IO Class and functions*
 
 ## The Main Program
@@ -60,7 +66,8 @@ The main program code is contained within a while loop. There are two main secti
 
 To handle errors, you put the code within try blocks. These allow you to “try” the code, but run through error handling options if there is a problem (Figure 7).
 
------ pic ---------
+![Figure 7](Figure%207.png "Figure 7")
+
 *Figure 7 :  The first section of the main code, which includes error handling*
 
 The error handling included here, first runs through the specific “FileNoteFoundError” exception, which is the most likely to cause a problem. If this happens, user-friendly descriptions are printed back to the user, and the program continues back to the top of the while loop. I’ve included a general exceptions catch, in case of unforeseen issues. If no issues are found, the code after “else” will run.
@@ -69,7 +76,8 @@ The error handling included here, first runs through the specific “FileNoteFou
 
 This section is similar to the first, only that the specific error handling is different (Figure 8). This time around we are looking for value errors. These would be from the user, if for instance they entered a string where the program expected a float or int. Rather than the program failing, it would go back to the top of the while loop and give the user another chance. Again, if no error is found then the else statement will run.
 
------ pic ---------
+![Figure 8](Figure%208.png "Figure 8")
+
 *Figure 8: The section of the main code, which also includes error handling*
 
 ## Summary
