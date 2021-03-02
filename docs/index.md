@@ -17,7 +17,8 @@ To demonstrate both of these, I will walk you through the script I created this 
 
 To get started, I imported the Pickle module and declared my variables (Figure 1). This sets them as their appropriate types (i.e., string, list, float, and int) and allows me to name my file.
 
------ pic ---------
+![Figure 1](Figure%201.png "Figure 1")
+
 *Figure 1: Declaring the script’s variables*
 
 ### The Processing Class and Functions
